@@ -1,5 +1,6 @@
-@extends('layouts.master')
-@section('content')
+@extends('layouts.doctormaster')
+@section('contentdoctor')
+
 <section class="content home">
     <div class="container-fluid">
         <div class="block-header">
@@ -331,4 +332,8 @@
 </section>
 
 
-@endsection()
+
+
+
+
+endsection()

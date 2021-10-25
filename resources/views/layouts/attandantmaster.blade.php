@@ -61,7 +61,7 @@
         <div class="user-info">
             <div class="admin-image"> <img src="/images/random-avatar7.jpg" alt=""> </div>
             <div class="admin-action-info"> <span>Welcome</span>
-                <h3>Admin</h3>
+                <h3>Faraz</h3>
                 <ul>
                    
                 </ul>
@@ -80,26 +80,7 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="btn1 active"><a href="{{ url('/index')}}"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>                                               
-                <li><a href=" {{ url('/appointment') }}" ><i class="zmdi zmdi-calendar-check"></i><span >Appointment</span> </a>
-                </li>
-                <li class="btn1 inactive"><a href="{{ url('/doctor') }}" ><i class="zmdi zmdi-account-add"></i><span>Doctors</span> </a>
-                </li>
-                <li id="btn1 inactive"><a href="{{ url('/patient') }}" ><i class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
-                </li>
-                <li  id="btnactive"><a href="{{ url('/employee') }}"><i class="zmdi zmdi-account"></i><span>Employee</span> </a>
-                </li>
-                
-                <li id="btnactive"><a href="{{ url('/department') }}"><i class="zmdi zmdi-account-circle"></i><span>Department</span> </a>
-                </li>
-                <li id="btnactive"><a href="{{ url('/medicine') }}"><i class="zmdi zmdi-account-circle"></i><span>Medicines</span> </a>
-                </li>
-                <li id="btnactive"><a href="{{ url('/doseschedule') }}" ><i class="zmdi zmdi-account-circle"></i><span>Dose Schedule</span> </a>
-                </li>
-                <li id="btnactive"><a href="{{ url('/schedule') }}" ><i class="zmdi zmdi-account-circle"></i><span>Create Schedule</span> </a>
-                </li>
-                <li id="btnactive"><a href="{{ url('/schedule') }}" ><i class="zmdi zmdi-account-circle"></i><span>Create Schedule</span> </a>
-                </li>
+                <li><a href="{{ url('/attendantdash')}}"><i class="zmdi zmdi-home"></i><span>Schedule List</span></a></li>                                                
                 
             </ul>
         </div>
@@ -107,7 +88,7 @@
     </aside>
 </section>
 
-@yield('content')
+@yield('contentattendant')
 
 <div class="color-bg"></div>
 
