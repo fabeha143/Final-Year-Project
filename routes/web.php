@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,14 +15,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//login
 Route::get('/login', [App\Http\Controllers\loginController::class, 'index'])->name('index');
+Route::get('/forgetpassword', [App\Http\Controllers\forgetpassController::class, 'index'])->name('index');
+
+
+//Admin
 Route::get('/index', [App\Http\Controllers\admindashController::class, 'index'])->name('index');
-
 Route::get('/appointment', [App\Http\Controllers\appointmentController::class, 'index'])->name('index');
-// Route::get('/patient', 'App\Http\Controllers\PatientController@index');
-// Route::get('/patient', 'App\Http\Controllers\PatientController@create');
-
-
 Route::resource('patient','PatientController');
 Route::resource('doctor','doctorController');
 Route::resource('employee','employeeController');
@@ -32,8 +32,10 @@ Route::resource('medicine','medicineController');
 Route::resource('doseschedule','doseschedController');
 Route::resource('schedule','scheduleController');
 
-Route::get('/inbox', [App\Http\Controllers\mailController::class, 'index'])->name('index');
+//Mail
 Route::get('/profile', [App\Http\Controllers\profileController::class, 'index'])->name('index');
+//profile
+Route::get('/inbox', [App\Http\Controllers\mailController::class, 'index'])->name('index');
 
 //Doctor dashboard routes
 Route::get('/doctordash', [App\Http\Controllers\doctordashController::class, 'index'])->name('index');
@@ -43,3 +45,11 @@ Route::get('/prescriptionList ', [App\Http\Controllers\doctordashController::cla
 
 //Attendant dashboard routes
 Route::get('/attendantdash ', [App\Http\Controllers\attendantdashController::class, 'index'])->name('index');
+
+//Website Routes
+Route::get('/home ', [App\Http\Controllers\homeController::class, 'index'])->name('index');
+Route::get('/Department ', [App\Http\Controllers\departmentWebController::class, 'index'])->name('index');
+Route::get('/service ', [App\Http\Controllers\serviceWebController::class, 'index'])->name('index');
+Route::get('/Doctor ', [App\Http\Controllers\DoctorWebController::class, 'index'])->name('index');
+Route::get('/DoctorDetail ', [App\Http\Controllers\DoctorWebController::class, 'detail'])->name('detail');
+Route::get('/contactus ', [App\Http\Controllers\contactusController::class, 'index'])->name('index');

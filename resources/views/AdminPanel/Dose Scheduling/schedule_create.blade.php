@@ -4,7 +4,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="block-header">
-            <h2>Create Scheduling</h2>
+            <h2>Create schedule</h2>
             <small class="text-muted">Welcome to Good Health</small>
         </div>
         <div class="row clearfix">

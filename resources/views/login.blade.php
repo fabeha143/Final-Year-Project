@@ -18,7 +18,7 @@
 <div class="container d-flex row">
     <div class="card-top"></div>
     <div class="card col-lg-12">
-        <h1 class="title"><span>Swift Hospital</span>Login <span class="msg">Sign in to start your session</span></h1>
+        <h1 class="title"><span>Good Health Hospital</span>Login <span class="msg">Sign in to start your session</span></h1>
         <div class="body">
             <form>
                 <div class="input-group icon before_span">
@@ -40,7 +40,6 @@
                     </div>
                     <div class="text-center">
                         <a href="index.html" class="btn btn-raised waves-effect g-bg-cyan">SIGN IN</a>
-                        <a href="sign-up.html" class="btn btn-raised waves-effect">SIGN UP</a>
                     </div>
                     <div class="text-center"> <a href="forgot-password.html">Forgot Password?</a></div>
                 </div>

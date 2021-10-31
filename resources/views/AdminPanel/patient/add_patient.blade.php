@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="block-header">
             <h2>Add Patient</h2>
-            <small class="text-muted">Welcome to Swift application</small>
+            <small class="text-muted">Welcome to Good Health</small>
         </div>
         <div class="row clearfix">
 			<div class="col-lg-12 col-md-12 col-sm-12">

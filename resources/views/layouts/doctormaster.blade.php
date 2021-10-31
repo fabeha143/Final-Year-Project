@@ -102,7 +102,7 @@
 <script src="/bundles/sparklinescripts.bundle.js"></script> <!-- Chart Plugins Js -->
 
 <script src="/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
-<script src="/js/pages/index.js"></script>
+<script src="/js/index.js"></script>
 <script src="/js/pages/charts/sparkline.min.js"></script>
 <script src="/plugins/dropzone/dropzone.js""></script>
 </body>
