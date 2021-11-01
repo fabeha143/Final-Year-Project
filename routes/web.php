@@ -53,3 +53,10 @@ Route::get('/service ', [App\Http\Controllers\serviceWebController::class, 'inde
 Route::get('/Doctor ', [App\Http\Controllers\DoctorWebController::class, 'index'])->name('index');
 Route::get('/DoctorDetail ', [App\Http\Controllers\DoctorWebController::class, 'detail'])->name('detail');
 Route::get('/contactus ', [App\Http\Controllers\contactusController::class, 'index'])->name('index');
+Route::get('/Appointment ', [App\Http\Controllers\AppointmentWebController::class, 'index'])->name('index');
+Route::get('/faq ', [App\Http\Controllers\faqWebController::class, 'index'])->name('index');
+Route::get('/loginpatient ', [App\Http\Controllers\loginWebController::class, 'index'])->name('index');
+Route::get('/forgetpasswordp ', [App\Http\Controllers\forgetpassWebController::class, 'index'])->name('index');
+Route::get('/register ', [App\Http\Controllers\registerWebController::class, 'index'])->name('index');
+
+

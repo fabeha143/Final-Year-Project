@@ -52,8 +52,8 @@
             <div class="row">
             <div class="col-lg-4 col-12">
                     <ul class="top-link">
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-8 col-12">
@@ -90,19 +90,22 @@
                                 <div class="nav-item">
 
                                     <ul class="nav-menu mobile-menu navigation">
-                                        <li class="active"><a href="#">Home</a>
+                                        <li class="active"><a href="{{ url('/home') }}">Home</a>
                                         </li>
-                                        <li><a href="#">Department</a>
+                                        <li><a href="{{ url('/Department') }}">Department</a>
                                         </li>
-                                        <li><a href="#">Services</a>
+                                        <li><a href="{{ url('/service') }}">Services</a>
                                         </li>
+                                        
                                         <li><a href="#">Doctors<i class="fas fa-angle-down"></i></a>
                                             <ul class="sub-menu">
-                                                <li><a href="doctor.html">Doctor</a></li>
-                                                <li><a href="doctor-details.html">Doctor Details</a></li>
+                                                <li><a href="{{ url('/Doctor') }}">Doctor</a></li>
+                                                <li><a href="{{ url('/DoctorDetail') }}">Doctor Details</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact-us.html">Contact Us</a></li>
+                                        <li><a href="{{ url('/faq') }}">Faq</a>
+                                        </li>
+                                        <li><a href="{{ url('/contactus') }}">Contact Us</a></li>
 
                                     </ul>
                                 </div>
@@ -111,7 +114,7 @@
 
 
                         <div class="h-menu-right">
-                            <a href="appointment.html" class="theme-btn">Appointment</a>
+                            <a href="{{ url('/Appointment') }}" class="theme-btn">Appointment</a>
                         </div>
 
                     </div>
