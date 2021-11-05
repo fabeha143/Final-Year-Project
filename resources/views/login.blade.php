@@ -20,17 +20,19 @@
     <div class="card col-lg-12">
         <h1 class="title"><span>Good Health Hospital</span>Login <span class="msg">Sign in to start your session</span></h1>
         <div class="body">
-            <form>
+            <form method="POST">
                 <div class="input-group icon before_span">
                     <span class="input-group-addon"> <i class="zmdi zmdi-account"></i> </span>
                     <div class="form-line">
-                        <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
+                        <input type="text" class="form-control" name="email" placeholder="Email" required autofocus>
+                        <span class="text-danger">@error('email') {{ $message}} @enderror</span>
                     </div>
                 </div>
                 <div class="input-group icon before_span">
                     <span class="input-group-addon"> <i class="zmdi zmdi-lock"></i> </span>
                     <div class="form-line">
                         <input type="password" class="form-control" name="password" placeholder="Password" required>
+                        <span class="text-danger">@error('password') {{ $message}} @enderror</span>
                     </div>
                 </div>
                 <div>
@@ -39,7 +41,7 @@
                         <label for="rememberme">Remember Me</label>
                     </div>
                     <div class="text-center">
-                        <a href="index.html" class="btn btn-raised waves-effect g-bg-cyan">SIGN IN</a>
+                        <button type="submit" class="btn btn-primary">SIGN IN</button>
                     </div>
                     <div class="text-center"> <a href="forgot-password.html">Forgot Password?</a></div>
                 </div>

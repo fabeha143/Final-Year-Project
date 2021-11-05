@@ -32,41 +32,35 @@
                                     <th>Email</th>
                                     <th>Gender</th>
                                     <th>Employee Role</th>
-                                    <th>Address</th>
                                     <th>Joining Date</th>
                                     <th>Phone</th>
+                                    <th>Address</th>
+                                    <th>username</th>
+                                    <th>password</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Fabeha</td>
-                                    <td>Naqvi</td>
-                                    <td>fabehanaqvi@gmail.com</td>
-                                    <td>Female</td>
-                                    <td>Admin</td>
-                                    <td>B-27 Karachi</td>
-                                    <td>12/7/21</td>
-                                    <td>0398438792</td>
-                                    
-                                    <td class="d-flex justify-content-between"><a class="btn btn-primary btn-sm">Edit</a><a class="btn btn-danger btn-sm">Delete</a></td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Fabeha</td>
-                                    <td>Naqvi</td>
-                                    <td>fabehanaqvi@gmail.com</td>
-                                    <td>Female</td>
-                                    <td>Admin</td>
-                                    <td>B-27 Karachi</td>
-                                    <td>12/7/21</td>
-                                    <td>0398438792</td>
-                                    
-                                    <td class="d-flex justify-content-between"><a class="btn btn-primary btn-sm">Edit</a><a class="btn btn-danger btn-sm">Delete</a></td>
-                                    
-                                </tr>
+                            @if(count($employee))
+                                @foreach($employee as $list)
+                                    <tr>
+                                        <td>{{ $list->id}}</td>
+                                        <td>{{ $list->emp_fname}}</td>
+                                        <td>{{ $list->emp_lname}}</td>
+                                        <td>{{ $list->emp_email}}</td>
+                                        <td>{{ $list->emp_gender}}</td>
+                                        <td>{{ $role->emp_role}}</td>
+                                        <td>{{ $list->emp_joining_date}}</td>
+                                        <td>{{ $list->emp_phone}}</td>
+                                        <td>{{ $list->emp_address}}</td>
+                                        <td>{{ $list->emp_username}}</td>
+                                        <td>{{ $list->emp_password}}</td>
+                                        
+                                        <td class="d-flex justify-content-between"><a class="btn btn-primary btn-sm">Edit</a><a class="btn btn-danger btn-sm">Delete</a></td>
+                                        
+                                    </tr>
+                                @endforeach
+                            @endif
                             </tbody>
                         </table>
                     </div>

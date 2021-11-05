@@ -17,8 +17,8 @@ Route::get('/', function () {
 });
 
 //login
-Route::get('/login', [App\Http\Controllers\loginController::class, 'index'])->name('index');
-Route::get('/forgetpassword', [App\Http\Controllers\forgetpassController::class, 'index'])->name('index');
+Route::get('/loginA', [App\Http\Controllers\loginController::class, 'index'])->name('index');
+Route::view('/forgetpassword', 'forgetpass');
 
 
 //Admin
@@ -47,16 +47,22 @@ Route::get('/prescriptionList ', [App\Http\Controllers\doctordashController::cla
 Route::get('/attendantdash ', [App\Http\Controllers\attendantdashController::class, 'index'])->name('index');
 
 //Website Routes
-Route::get('/home ', [App\Http\Controllers\homeController::class, 'index'])->name('index');
-Route::get('/Department ', [App\Http\Controllers\departmentWebController::class, 'index'])->name('index');
-Route::get('/service ', [App\Http\Controllers\serviceWebController::class, 'index'])->name('index');
-Route::get('/Doctor ', [App\Http\Controllers\DoctorWebController::class, 'index'])->name('index');
-Route::get('/DoctorDetail ', [App\Http\Controllers\DoctorWebController::class, 'detail'])->name('detail');
-Route::get('/contactus ', [App\Http\Controllers\contactusController::class, 'index'])->name('index');
-Route::get('/Appointment ', [App\Http\Controllers\AppointmentWebController::class, 'index'])->name('index');
-Route::get('/faq ', [App\Http\Controllers\faqWebController::class, 'index'])->name('index');
-Route::get('/loginpatient ', [App\Http\Controllers\loginWebController::class, 'index'])->name('index');
-Route::get('/forgetpasswordp ', [App\Http\Controllers\forgetpassWebController::class, 'index'])->name('index');
-Route::get('/register ', [App\Http\Controllers\registerWebController::class, 'index'])->name('index');
+Route::view('/home ', 'website/homepage');
+Route::view('/Department ', 'website/departmentweb');
+Route::view('/service ', 'website/serviceweb');
+Route::view('/Doctor ', 'website/doctorweb');
+Route::view('/DoctorDetail ', 'website/doctorwebDetail');
+Route::view('/contactus ', 'website/contactus');
+Route::view('/Appointment ', 'website/appointmentweb');
+Route::view('/faq ', 'website/faqWeb');
+Route::view('/loginpatient ', 'website/loginweb');
+Route::view('/forgetpasswordp ', 'website/forgetpassweb');
+Route::view('/register ', 'website/register');
 
 
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
