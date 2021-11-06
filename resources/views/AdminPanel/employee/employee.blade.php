@@ -41,7 +41,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @if(count($employee))
+                           @if(count($employee))
                                 @foreach($employee as $list)
                                     <tr>
                                         <td>{{ $list->id}}</td>
@@ -49,18 +49,21 @@
                                         <td>{{ $list->emp_lname}}</td>
                                         <td>{{ $list->emp_email}}</td>
                                         <td>{{ $list->emp_gender}}</td>
-                                        <td>{{ $role->emp_role}}</td>
+                                        <td>{{ $list->role_id}}</td>
                                         <td>{{ $list->emp_joining_date}}</td>
                                         <td>{{ $list->emp_phone}}</td>
                                         <td>{{ $list->emp_address}}</td>
                                         <td>{{ $list->emp_username}}</td>
                                         <td>{{ $list->emp_password}}</td>
                                         
-                                        <td class="d-flex justify-content-between"><a class="btn btn-primary btn-sm">Edit</a><a class="btn btn-danger btn-sm">Delete</a></td>
+                                        <td class="d-flex justify-content-center">
+                                                 
+
+                                                </td>
                                         
                                     </tr>
                                 @endforeach
-                            @endif
+                            @endif 
                             </tbody>
                         </table>
                     </div>

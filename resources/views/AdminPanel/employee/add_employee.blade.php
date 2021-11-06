@@ -24,7 +24,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-lg-4 col-sm-12">
+                            <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
                                     {{ Form::text('lname','Last Name',array('class' => 'form-control'))}}
@@ -40,7 +40,8 @@
                             </div>
                             
                         </div>
-                        <div class="row clearfix">                            <div class="col-lg-4 col-sm-12">
+                        <div class="row clearfix">                            
+                            <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
                                         {{ Form::text('phone','Phone Number',array('class' => 'form-control'))}}
@@ -59,17 +60,14 @@
                                 <div class="form-group drop-custum">
                                 {{ Form::select('gender',array('f' => 'Female' , 'm'=>'Male'),'null',['class'=> 'form-control' , 'placeholder' => 'Please Select' ] )}}
                                 </div>
-                            </div> -->
-                            <!-- <div class="col-lg-4">
+                            </div>
+                             <div class="col-lg-4">
                                 <div class="form-group drop-custum">
-                                {!! Form::select('emp_role', $employee_role,'null',['class'=> 'form-control' , 'placeholder' => 'Please Select Role' ]) !!}
+                                {{ Form::select('role_id', $employee_role,'null',['class'=> 'form-control' , 'placeholder' => 'Please Select Role' ]) }}
                                 </div>
-                            </div>  -->
+                            </div> 
                           <div>
                               <div>
-                              <div class="form-group drop-custum">
-                                {{ Form::select('emp_role',array('1' => 'admin' , '2'=>'doctor'),'null',['class'=> 'form-control' , 'placeholder' => 'Please Select' ] )}}
-                                </div>
                               </div>
                           </div>
                         </div>

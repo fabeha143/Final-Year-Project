@@ -29,45 +29,44 @@
                                     <th>Patient Id</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
+                                    <th>Phone Number</th>
+                                    <th>Addmission Date</th>
                                     <th>Age</th>
                                     <th>Gender</th>
-                                    <th>Phone Number</th>
-                                    <th>Address</th>
-                                    <th>Addmission Date</th>
                                     <th>Patient Catogary</th>
-                                    <th>Doctor Id</th>
+                                    <th>email</th>
+                                    <th>Address</th>
+                                    <th>Doctor Name</th>
+                                    <th>ward no</th>
+                                    <th>patient date</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Fabeha</td>
-                                    <td>Naqvi</td>
-                                    <td>22</td>
-                                    <td>Female</td>
-                                    <td>093948710</td>
-                                    <td>B-27 Karachi</td>
-                                    <td>12/7/21</td>
-                                    <td>In Patient</td>
-                                    <td>4</td>
-                                    <td class="d-flex justify-content-between"><a class="btn btn-primary btn-sm">Edit</a><a class="btn btn-danger btn-sm">Delete</a></td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Fabeha</td>
-                                    <td>Naqvi</td>
-                                    <td>22</td>
-                                    <td>Female</td>
-                                    <td>093948710</td>
-                                    <td>B-27 Karachi</td>
-                                    <td>12/7/21</td>
-                                    <td>In Patient</td>
-                                    <td>4</td>
-                                    <td class="d-flex justify-content-between"><a class="btn btn-primary btn-sm">Edit</a><a class="btn btn-danger btn-sm">Delete</a></td>
-                                    
-                                </tr>
+                            <!-- @if(count($patients))
+                                @foreach($patients as $list) -->
+                                    <!-- <tr> -->
+                                        <!-- <td>{{ $list->pt_id}}</td>
+                                        <td>{{ $list->pt_fname}}</td>
+                                        <td>{{ $list->pt_lname}}</td>
+                                        <td>{{ $list->pt_phone}}</td>
+                                        <td>{{ $list->pt_addmission_date}}</td>
+                                        <td>{{ $list->pt_age}}</td>
+                                        <td>{{ $list->pt_gender}}</td>
+                                        <td>{{ $list->pt_category}}</td>
+                                        <td>{{ $list->pt_email}}</td>
+                                        <td>{{ $list->pt_address}}</td>
+                                        <td>{{ $list->pt_doc_name}}</td>
+                                        <td>{{ $list->pt_attendant}}</td>
+                                        <td>{{ $list->ward_no}}</td>
+                                        <td>{{ $list->pt_date}}</td>
+                                        
+                                        <td class="d-flex justify-content-between"><a class="btn btn-primary btn-sm">Edit</a><a class="btn btn-danger btn-sm">Delete</a></td> -->
+                                        
+                                    <!-- </tr>
+                                @endforeach
+                            @endif -->
+                                
                             </tbody>
                         </table>
                     </div>

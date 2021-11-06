@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class EmployeeRoles extends Migration
+class Departments extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class EmployeeRoles extends Migration
      */
     public function up()
     {
-        Schema::create('employee_roles', function (Blueprint $table) {
+        Schema::create('departments', function (Blueprint $table) {
             $table->id();
-            $table->text('role_name');
-            $table->longtext('role_detail');
+            $table->string('dep_name');
+            $table->longText('dep_description');
+            $table->timestamps();
         });
     }
 

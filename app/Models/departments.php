@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class employee_role extends Model
+class departments extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $fillable = ['role_name','role_description'];
+    protected $fillable = ['dep_name','dep_description'];
 }

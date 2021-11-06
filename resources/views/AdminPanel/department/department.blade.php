@@ -29,27 +29,36 @@
                                     <th>Depart_id</th>
                                     <th>Depart_name</th>
                                     <th>Description</th>
-                                    <th>Depart_status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Neurology</td>
-                                    <td>THis is the description</td>
-                                    <td>Active</td>
-                                    <td class="d-flex justify-content-center"><a class="btn btn-primary btn-sm">Edit</a><a class="btn btn-danger btn-sm">Delete</a></td>
-                                    
+                                   @if(count($departments))
+                                        @foreach($departments as $list)
+                                            <tr>
+                                                <td>{{ $list->id}}</td>
+                                                <td>{{ $list->dep_name}}</td>
+                                                <td>{{ $list->dep_description}}</td>
+                                        
+                                                <td class="d-flex justify-content-center">
+                                                    {!! Form::open(array('url' => route('department.edit', ['department' => $list->id]), 'method' => 'get')) !!}
+                                                        {!! Form::submit('Edit', array('class' => 'btn btn-primary openbutton')) !!}
+                                                    {!! Form::close() !!}
+
+                                                    {!! Form::open(array('url' => route('department.destroy', ['department' => $list->id]), 'method' => 'delete')) !!}		
+                                                        {!! Form::submit('Delete', array('class' => 'btn btn-danger openbutton')) !!}
+                                            
+                                                    {!! Form::close() !!}
+
+                                                </td>
+                                        
+                                            </tr>
+                                        @endforeach
+                                    @endif
+                                            
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Neurology</td>
-                                    <td>THis is the description</td>
-                                    <td>Active</td>
-                                    <td class="d-flex justify-content-center"><a class="btn btn-primary btn-sm">Edit</a><a class="btn btn-danger btn-sm">Delete</a></td>
-                                    
-                                </tr>
+                               
                             </tbody>
                         </table>
                     </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\patient;
 use Illuminate\Http\Request;
 
+
 class PatientController extends Controller
 {
     /**
@@ -13,6 +14,7 @@ class PatientController extends Controller
      */
     public function index()
     {
+        // $patients = patients::all();
         return view('AdminPanel/patient/patientdetail');
     }
 
@@ -23,7 +25,7 @@ class PatientController extends Controller
      */
     public function create()
     {
-        return view('AdminPanel/patient/add_patient');
+        
     }
 
     /**

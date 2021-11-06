@@ -13,12 +13,12 @@
 					<div class="header">
 						<h2>Basic Information <small>Description text here...</small> </h2> 
 					</div>
-                    {{ Form::open(array('route' => 'department.store' , 'method' => 'POST' , 'class' => 'body')) }}
+                    {{ Form::open(array('url' => route('department.update', ['department' => $departedit->id]), 'method' => 'put' , 'class' => 'body')) }}
                         <div class="row clearfix">
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('dep_name',null,array('class' => 'form-control', 'placeholder' => 'Department Name'))}}
+                                    {{ Form::text('dep_name',$departedit->dep_name,array('class' => 'form-control', 'placeholder' => 'Department Name'))}}
                                     </div>
                                 </div>
                             </div>
@@ -28,7 +28,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('dep_description',null,array('class' => 'form-control', 'placeholder' => 'Department Description'))}}
+                                    {{ Form::text('dep_description',$departedit->dep_description,array('class' => 'form-control', 'placeholder' => 'Department Description'))}}
                                     </div>
                                 </div>
                             </div>
