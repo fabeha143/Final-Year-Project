@@ -89,10 +89,14 @@
                 </li>
                 <li  id="btnactive"><a href="{{ url('/employee') }}"><i class="zmdi zmdi-account"></i><span>Employee</span> </a>
                 </li>
+                <li  id="btnactive"><a href="{{ url('/employeeRole') }}"><i class="zmdi zmdi-account"></i><span>Employee Role</span> </a>
+                </li>
                 
                 <li id="btnactive"><a href="{{ url('/department') }}"><i class="zmdi zmdi-account-circle"></i><span>Department</span> </a>
                 </li>
                 <li id="btnactive"><a href="{{ url('/medicine') }}"><i class="zmdi zmdi-account-circle"></i><span>Medicines</span> </a>
+                </li>
+                <li id="btnactive"><a href="{{ url('/medicinesCategory') }}"><i class="zmdi zmdi-account-circle"></i><span>Medicines Category</span> </a>
                 </li>
                 <li id="btnactive"><a href="{{ url('/doseschedule') }}" ><i class="zmdi zmdi-account-circle"></i><span>Dose Schedule</span> </a>
                 </li>

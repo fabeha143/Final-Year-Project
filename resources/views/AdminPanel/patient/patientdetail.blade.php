@@ -43,29 +43,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <!-- @if(count($patients))
-                                @foreach($patients as $list) -->
-                                    <!-- <tr> -->
-                                        <!-- <td>{{ $list->pt_id}}</td>
-                                        <td>{{ $list->pt_fname}}</td>
-                                        <td>{{ $list->pt_lname}}</td>
-                                        <td>{{ $list->pt_phone}}</td>
-                                        <td>{{ $list->pt_addmission_date}}</td>
-                                        <td>{{ $list->pt_age}}</td>
-                                        <td>{{ $list->pt_gender}}</td>
-                                        <td>{{ $list->pt_category}}</td>
-                                        <td>{{ $list->pt_email}}</td>
-                                        <td>{{ $list->pt_address}}</td>
-                                        <td>{{ $list->pt_doc_name}}</td>
-                                        <td>{{ $list->pt_attendant}}</td>
-                                        <td>{{ $list->ward_no}}</td>
-                                        <td>{{ $list->pt_date}}</td>
-                                        
-                                        <td class="d-flex justify-content-between"><a class="btn btn-primary btn-sm">Edit</a><a class="btn btn-danger btn-sm">Delete</a></td> -->
-                                        
-                                    <!-- </tr>
-                                @endforeach
-                            @endif -->
+                            
                                 
                             </tbody>
                         </table>

@@ -25,7 +25,7 @@ class Employees extends Migration
             $table->string('emp_username');
             $table->string('emp_password');
             $table->string('emp_confirm_password');
-            $table->integer('role_id');
+            $table->foreignId('role_id')->constrained('employee_roles');
             $table->timestamps();
         });
     }

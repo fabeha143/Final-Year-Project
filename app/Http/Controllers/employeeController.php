@@ -83,7 +83,17 @@ class employeeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $employeeEdit  = employee::where('id' , $id)->first();
+
+        $employee_role = employee_role::all();
+        $emp_role_data = array();
+
+        foreach( $employee_role as $role )
+        {            
+            $emp_role_data[$role->id] = $role->role_name; 
+        }
+
+        return view('AdminPanel/employee/edit_employee',compact('employeeEdit','emp_role_data') );
     }
 
     /**
@@ -95,7 +105,20 @@ class employeeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        employee::where('id' , $id)->update([
+            'emp_fname' => $request->Fname,
+            'emp_lname' => $request->lname,
+            'emp_email' => $request->email,
+            'emp_gender' => $request->gender,
+            'emp_joining_date' => $request->joining_date,
+            'emp_phone' => $request->phone,
+            'emp_address' => $request->address,
+            'emp_username' => $request->username,
+            'emp_password' => $request->password,
+            'emp_confirm_password' => $request->password_confirmation,
+            'role_id' => $request->role_id,
+        ]);
+        return redirect(route('employee.index'));  
     }
 
     /**
@@ -106,6 +129,7 @@ class employeeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        employee::where('id' , $id)->delete();
+        return redirect(route('employee.index'));
     }
 }

@@ -6,7 +6,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="block-header">
-            <h2>Add Employee</h2>
+            <h2>Edit Employee</h2>
             <small class="text-muted">Welcome to Good Health</small>
         </div>
         <div class="row clearfix">
@@ -15,26 +15,26 @@
 					<div class="header">
 						<h2>Basic Information <small>Description text here...</small> </h2> 
 					</div>
-                    {{ Form::open(array('route' => 'employee.store' , 'method' => 'POST')) }}
+					{{ Form::open(array('url' => route('employee.update', ['employee' => $employeeEdit->id , 'emp_role_data' =>  $emp_role_data]), 'method' => 'put' , 'class' => 'body')) }}
                         <div class="row clearfix">
                             <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('Fname','First Name',array('class' => 'form-control'))}}
+                                    {{ Form::text('Fname',$employeeEdit->Fname,array('class' => 'form-control' , 'placeholder' => 'First Name'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('lname','Last Name',array('class' => 'form-control'))}}
+                                    {{ Form::text('lname',$employeeEdit->emp_lname,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::email('email','Email',array('class' => 'form-control'))}}
+                                    {{ Form::email('email',$employeeEdit->emp_email,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
@@ -44,14 +44,14 @@
                             <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        {{ Form::text('phone','Phone Number',array('class' => 'form-control'))}}
+                                        {{ Form::text('phone',$employeeEdit->emp_phone,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::date('joining_date','Joining Date',array('class' => 'form-control'))}}
+                                    {{ Form::text('joining_date',$employeeEdit->emp_joining_date,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +63,7 @@
                             </div>
                              <div class="col-lg-4">
                                 <div class="form-group drop-custum">
-                                {{ Form::select('role_id', $employee_role,'null',['class'=> 'form-control' , 'placeholder' => 'Please Select Role' ]) }}
+                                {{ Form::select('role_id',$emp_role_data,'null',['class'=> 'form-control' , 'placeholder' => 'Please Select Role' ]) }}
                                 </div>
                             </div> 
                           <div>
@@ -76,7 +76,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::textarea('address','Address',array('class' => 'form-control'))}}
+                                    {{ Form::textarea('address',$employeeEdit->emp_address,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('username','Username',array('class' => 'form-control', 'placeholder' => 'Username'))}}
+                                    {{ Form::text('username',$employeeEdit->emp_username,array('class' => 'form-control', 'placeholder' => 'Username'))}}
                                     </div>
                                 </div>
                             </div>

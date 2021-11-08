@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\medicines_category;
+use App\Models\medicines;
 
 class medicineController extends Controller
 {
@@ -13,7 +15,8 @@ class medicineController extends Controller
      */
     public function index()
     {
-        return view('AdminPanel/medicine/medicine');
+        $medicines = medicines::all();
+        return view('AdminPanel/medicine/medicine',['medicines' => $medicines]);
     }
 
     /**
@@ -23,7 +26,14 @@ class medicineController extends Controller
      */
     public function create()
     {
-        return view('AdminPanel/medicine/add_medicine');
+        $items = medicines_category::select('id','med_cat_name')->get();
+        
+        $medicines_category = array();
+        foreach( $items as $item )
+        {
+            $medicines_category[$item->id] = $item->med_cat_name;
+        }
+        return view('AdminPanel/medicine/add_medicine',compact('medicines_category'));
     }
 
     /**
@@ -34,7 +44,13 @@ class medicineController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        medicines::create([
+            'med_name' => $request->med_name,
+            'med_company' => $request->med_company,
+            'med_expiry' => $request->med_expiry,
+            'med_cat' => $request->med_cat,
+        ]);
+        return redirect(route('medicine.index'));
     }
 
     /**
@@ -56,7 +72,16 @@ class medicineController extends Controller
      */
     public function edit($id)
     {
-        //
+        $medicinesedit  = medicines::where('id' , $id)->first();
+        $medicines_category = medicines_category::all();
+
+        $medicinesData = array();
+        foreach( $medicines_category as $category )
+        {            
+            $medicinesData[$category->id] = $category->med_cat_name; 
+        }
+
+        return view('AdminPanel/medicine/edit_medicines',compact('medicinesedit','medicinesData') );
     }
 
     /**
@@ -68,7 +93,13 @@ class medicineController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        medicines::where('id' , $id)->update([
+            'med_name' => $request->med_name,
+            'med_company' => $request->med_company,
+            'med_expiry' => $request->med_expiry,
+            'med_cat' => $request->med_cat,
+        ]);
+        return redirect(route('medicine.index'));
     }
 
     /**
@@ -79,6 +110,7 @@ class medicineController extends Controller
      */
     public function destroy($id)
     {
-        //
+        medicines::where('id' , $id)->delete();
+        return redirect(route('medicine.index'));
     }
 }

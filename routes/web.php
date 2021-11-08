@@ -27,10 +27,12 @@ Route::get('/appointment', [App\Http\Controllers\appointmentController::class, '
 Route::resource('patient','PatientController');
 Route::resource('doctor','doctorController');
 Route::resource('employee','employeeController');
+Route::resource('employeeRole','employee_role_controller');
 Route::resource('department','departmentController');
 Route::resource('medicine','medicineController');
 Route::resource('doseschedule','doseschedController');
 Route::resource('schedule','scheduleController');
+Route::resource('medicinesCategory','med_cat_controller');
 
 //Mail
 Route::get('/profile', [App\Http\Controllers\profileController::class, 'index'])->name('index');
