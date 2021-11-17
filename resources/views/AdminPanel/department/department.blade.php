@@ -26,8 +26,8 @@
                         <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                             <thead>
                                 <tr>
-                                    <th>Depart_id</th>
-                                    <th>Depart_name</th>
+                                    <th>Department Id</th>
+                                    <th>Department Name</th>
                                     <th>Description</th>
                                     <th>Action</th>
                                 </tr>

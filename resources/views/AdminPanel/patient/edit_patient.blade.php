@@ -15,26 +15,26 @@
 					<div class="header">
 						<h2>Basic Information <small>Description text here...</small> </h2> 
 					</div>
-                    {{ Form::open(array('route' => 'patient.store' , 'method' => 'POST' , 'class' => 'body')) }}
+                    {{ Form::open(array('url' => route('patient.update', ['patient' => $patient_edit->id]), 'method' => 'put' , 'class' => 'body')) }}
                         <div class="row clearfix">
                             <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('Fname','First Name',array('class' => 'form-control'))}}
+                                    {{ Form::text('Fname',$patient_edit->pat_fname,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('lname','Last Name',array('class' => 'form-control'))}}
+                                    {{ Form::text('lname',$patient_edit->pat_lname,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::date('date_of_birth','Date of Birth',array('class' => 'form-control'))}}
+                                    {{ Form::date('date_of_birth',$patient_edit->pat_date_of_birth,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
@@ -43,14 +43,14 @@
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::date('addmission_date','Addmission Date',array('class' => 'form-control'))}}
+                                    {{ Form::date('addmission_date',$patient_edit->pat_admission_date,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::email('email','Email',array('class' => 'form-control'))}}
+                                    {{ Form::email('email',$patient_edit->pat_email,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
@@ -67,14 +67,14 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('address','Address',array('class' => 'form-control'))}}
+                                    {{ Form::text('address',$patient_edit->pat_address,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('phone','Phone Number',array('class' => 'form-control'))}}
+                                    {{ Form::text('phone',$patient_edit->pat_phone,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>

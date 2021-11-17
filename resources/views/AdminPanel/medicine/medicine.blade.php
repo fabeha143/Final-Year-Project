@@ -29,8 +29,8 @@
                                     <th>Medicines Id</th>
                                     <th>Medicines Name</th>
                                     <th>Medicines company</th>
-                                    <th>Medicine expire</th>
-                                    <th>Medicines category</th>
+                                    <th>Medicine Expiry</th>
+                                    <th>Medicines Category</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

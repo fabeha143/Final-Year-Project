@@ -12889,7 +12889,6 @@ section.content {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
     border: none;
     outline: none;
-    margin-left: 10px;
     color: white;
 }
 .btn:not(.btn-link):not(.btn-circle):hover {

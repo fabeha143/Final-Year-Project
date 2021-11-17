@@ -34,7 +34,7 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::date('med_expiry',null,array('class' => 'form-control', 'placeholder' => 'Medicines Expiry'))}}
+                                    {{ Form::date('med_expiry',"Medicines Expiry",array('class' => 'form-control', 'placeholder' => 'Medicines Expiry'))}}
                                     </div>
                                 </div>
                             </div>

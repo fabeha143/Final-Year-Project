@@ -26,9 +26,9 @@
                         <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                             <thead>
                                 <tr>
-                                    <th>med_cat_id</th>
-                                    <th>med_cat_name</th>
-                                    <th>med_cat_description</th>
+                                    <th>Medicine Category Id</th>
+                                    <th>Medicine Category Name</th>
+                                    <th>Medicine Category Description</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

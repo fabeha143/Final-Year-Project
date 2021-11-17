@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\patient;
+use App\Models\doctor;
+use App\Models\departments;
 use Illuminate\Http\Request;
 
 
@@ -14,8 +16,8 @@ class PatientController extends Controller
      */
     public function index()
     {
-        // $patients = patients::all();
-        return view('AdminPanel/patient/patientdetail');
+       $patients = patient::all();
+        return view('AdminPanel/patient/patientdetail',['patients' => $patients]);
     }
 
     /**
@@ -25,7 +27,16 @@ class PatientController extends Controller
      */
     public function create()
     {
+        // $items = doctor::select('id','doc_fname')->get();
         
+        // $doctorName = array();
+        // foreach( $items as $item )
+        // {
+        //     $doctorName[$item->id] = $item->doc_fname;
+        // }
+        
+        return view('AdminPanel/patient/add_patient');
+ 
     }
 
     /**
@@ -36,7 +47,18 @@ class PatientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        patient::create([
+            'pat_fname' => $request->Fname,
+            'pat_lname' => $request->lname,
+            'pat_phone' => $request->phone,
+            'pat_admission_date' => $request->addmission_date,
+            'pat_gender' => $request->gender,
+            'pat_category' => $request->pat_category,
+            'pat_email' => $request->email,
+            'pat_address' => $request->address,
+            'pat_date_of_birth' => $request->date_of_birth,
+        ]);
+        return redirect(route('patient.index'));
     }
 
     /**
@@ -58,7 +80,8 @@ class PatientController extends Controller
      */
     public function edit($id)
     {
-        //
+        $patient_edit  = patient::where('id' , $id)->first();
+        return view('AdminPanel/patient/edit_patient',['patient_edit' => $patient_edit] );
     }
 
     /**
@@ -70,7 +93,18 @@ class PatientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        patient::where('id' , $id)->update([
+            'pat_fname' => $request->Fname,
+            'pat_lname' => $request->lname,
+            'pat_phone' => $request->phone,
+            'pat_admission_date' => $request->addmission_date,
+            'pat_gender' => $request->gender,
+            'pat_category' => $request->pat_category,
+            'pat_email' => $request->email,
+            'pat_address' => $request->address,
+            'pat_date_of_birth' => $request->date_of_birth,
+        ]);
+        return redirect(route('patient.index'));
     }
 
     /**
@@ -81,6 +115,7 @@ class PatientController extends Controller
      */
     public function destroy($id)
     {
-        //
+        patient::where('id' , $id)->delete();
+        return redirect(route('patient.index'));
     }
 }

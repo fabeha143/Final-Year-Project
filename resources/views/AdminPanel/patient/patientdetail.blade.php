@@ -31,18 +31,43 @@
                                     <th>Last Name</th>
                                     <th>Phone Number</th>
                                     <th>Addmission Date</th>
-                                    <th>Age</th>
                                     <th>Gender</th>
                                     <th>Patient Catogary</th>
-                                    <th>email</th>
+                                    <th>Email</th>
                                     <th>Address</th>
-                                    <th>Doctor Name</th>
-                                    <th>ward no</th>
-                                    <th>patient date</th>
+                                    <th>Date of birth</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                            @if(count($patients))
+                                @foreach($patients as $list)
+                                    <tr>
+                                        <td>{{ $list->id}}</td>
+                                        <td>{{ $list->pat_fname}}</td>
+                                        <td>{{ $list->pat_lname}}</td>
+                                        <td>{{ $list->pat_phone}}</td>
+                                        <td>{{ $list->pat_admission_date}}</td>
+                                        <td>{{ $list->pat_gender}}</td>
+                                        <td>{{ $list->pat_category}}</td>
+                                        <td>{{ $list->pat_email}}</td>
+                                        <td>{{ $list->pat_address}}</td>
+                                        <td>{{ $list->pat_date_of_birth}}</td>
+                                        <td class="d-flex justify-content-center">
+                                            {!! Form::open(array('url' => route('patient.edit', ['patient' => $list->id]), 'method' => 'get')) !!}
+                                                {!! Form::submit('Edit', array('class' => 'btn btn-primary openbutton')) !!}
+                                            {!! Form::close() !!}
+
+                                            {!! Form::open(array('url' => route('patient.destroy', ['patient' => $list->id]), 'method' => 'delete')) !!}		
+                                                {!! Form::submit('Delete', array('class' => 'btn btn-danger openbutton')) !!}
+                                    
+                                            {!! Form::close() !!}
+
+
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif 
                             
                                 
                             </tbody>

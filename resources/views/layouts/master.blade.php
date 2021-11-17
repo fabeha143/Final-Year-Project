@@ -19,7 +19,7 @@
 </head>
 
 <body class="theme-cyan">
-<div class="page-loader-wrapper">
+<!-- <div class="page-loader-wrapper">
     <div class="loader">
         <div class="preloader">
             <div class="spinner-layer pl-cyan">
@@ -33,7 +33,7 @@
         </div>
         <p>Please wait...</p>
     </div>
-</div>
+</div> -->
 
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div>
@@ -89,8 +89,8 @@
                 </li>
                 <li  id="btnactive"><a href="{{ url('/employee') }}"><i class="zmdi zmdi-account"></i><span>Employee</span> </a>
                 </li>
-                <li  id="btnactive"><a href="{{ url('/employeeRole') }}"><i class="zmdi zmdi-account"></i><span>Employee Role</span> </a>
-                </li>
+                <!-- <li  id="btnactive"><a href="{{ url('/employeeRole') }}"><i class="zmdi zmdi-account"></i><span>Employee Role</span> </a>
+                </li> -->
                 
                 <li id="btnactive"><a href="{{ url('/department') }}"><i class="zmdi zmdi-account-circle"></i><span>Department</span> </a>
                 </li>

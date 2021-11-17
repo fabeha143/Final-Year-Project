@@ -52,8 +52,8 @@
             <div class="row">
             <div class="col-lg-4 col-12">
                     <ul class="top-link">
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register</a></li>
+                        <li><a href="{{ url('/loginpatient') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-8 col-12">

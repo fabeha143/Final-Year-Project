@@ -3,7 +3,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="block-header">
-            <h2>Add Doctor</h2>
+            <h2>Edit Doctor</h2>
             <small class="text-muted">Welcome to Good Health</small>
         </div>
         <div class="row clearfix">
@@ -13,19 +13,19 @@
 						<h2>Basic Information <small>Description text here...</small> </h2>
 						
 					</div>
-					{{ Form::open(array('route' => 'doctor.store' , 'method' => 'POST' , 'enctype' => 'multipart/form-data' , 'class' => 'body')) }}
+					{{ Form::open(array('url' => route('doctor.update', ['doctor' => $doctoredit->id , 'department_data' =>  $department_data]), 'method' => 'put' , 'enctype' => 'multipart/form-data', 'class' => 'body')) }}
                         <div class="row clearfix">
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('Fname','First Name',array('class' => 'form-control'))}}
+                                    {{ Form::text('Fname',$doctoredit->doc_fname,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('lname','Last Name',array('class' => 'form-control'))}}
+                                    {{ Form::text('lname',$doctoredit->doc_lname,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
@@ -34,7 +34,7 @@
                             <div class="col-sm-3">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        {{ Form::date('dateofbirth','Date of birth',array('class' => 'form-control'))}}
+                                        {{ Form::date('dateofbirth',$doctoredit->doc_date_of_birth,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
@@ -46,28 +46,28 @@
                             <div class="col-sm-3">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        {{ Form::select('doc_department', $department,'null',['class'=> 'form-control' , 'placeholder' => 'Please Select department' ]) }}
+                                        {{ Form::select('doc_department', $department_data,'null',['class'=> 'form-control' , 'placeholder' => 'Please Select department' ]) }}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('phone','Phone Number',array('class' => 'form-control'))}}
+                                    {{ Form::text('phone',$doctoredit->doc_phone,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::email('email','Email',array('class' => 'form-control'))}}
+                                    {{ Form::email('email',$doctoredit->doc_email,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('address','Address',array('class' => 'form-control'))}}
+                                    {{ Form::text('address',$doctoredit->doc_address,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
@@ -85,21 +85,21 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        {{ Form::textarea('doc_biography','Short Biography',array('class' => 'form-control'))}}
+                                        {{ Form::textarea('doc_biography',$doctoredit->doc_biography,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('doc_username','Username',array('class' => 'form-control'))}}
+                                    {{ Form::text('doc_username',$doctoredit->doc_username,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::text('doc_password','Password',array('class' => 'form-control'))}}
+                                    {{ Form::text('doc_password',$doctoredit->doc_password,array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>

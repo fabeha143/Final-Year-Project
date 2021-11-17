@@ -15,7 +15,7 @@
 					<div class="header">
 						<h2>Basic Information <small>Description text here...</small> </h2> 
 					</div>
-                    {{ Form::open(array('route' => 'employee.store' , 'method' => 'POST')) }}
+                    {{ Form::open(array('route' => 'employee.store' , 'method' => 'POST' , 'class' => 'body')) }}
                         <div class="row clearfix">
                             <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
@@ -34,7 +34,7 @@
                             <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    {{ Form::email('email','Email',array('class' => 'form-control'))}}
+                                    {{ Form::email('email','email',array('class' => 'form-control'))}}
                                     </div>
                                 </div>
                             </div>
